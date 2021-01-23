@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h3 class="card-title">{{item.titre}}</h3>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{item.lieu}}</li>
+        <li class="list-group-item">{{item.date_debut | date:'yyyy-MM-dd'}}</li>
+        <li class="list-group-item">{{item.date_fin | date:'yyyy-MM-dd'}}</li>
+    </ul>
+    <div class="card-body">
+        <a class="card-link">Card link</a>
+        <a class="card-link">Another link</a>
+    </div>
+</div>

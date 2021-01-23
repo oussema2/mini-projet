@@ -1,0 +1,17 @@
+<button class="btn btn-success mt-4 ml-5" (click)="onAddMeeting()">{{ buttonText }}</button>
+
+<div class="container">
+
+    <div class="row" *ngIf="ondisplaylist">
+
+        <app-meeting-card *ngFor="let item of meetings ; let i = index" [index]="i" [item]="item" class="col-3 mb-4 ">
+        </app-meeting-card>
+
+
+
+
+
+    </div>
+
+    <app-add-meeting *ngIf="ondisplayAdd"></app-add-meeting>
+</div>

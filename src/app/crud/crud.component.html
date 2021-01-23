@@ -1,0 +1,35 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Lieu</th>
+            <th scope="col">Date Debut</th>
+            <th scope="col">Date Fin</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let meeting of meetings">
+            <th scope="row">{{ meeting.id }}</th>
+            <td>{{ meeting.titre }}</td>
+            <td>{{ meeting.lieu }}</td>
+            <td>{{meeting.date_debut | date:'yyyy-MM-dd'}}</td>
+            <td>{{meeting.date_fin| date:'yyyy-MM-dd'}}</td>
+            <td><button class="btn btn-danger" (click)="onDelete(meeting.id)">Delete</button></td>
+            <td><button class="btn btn-success" (click)=ondisplayForm(meeting.id)>Update</button></td>
+
+
+
+        </tr>
+
+
+    </tbody>
+
+
+</table>
+<app-add-meeting *ngIf="displayForm" [index]="id"></app-add-meeting>
