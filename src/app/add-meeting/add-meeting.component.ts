@@ -37,6 +37,7 @@ export class AddMeetingComponent implements OnInit {
       this.service.editMeeting(this.index ,meeting);
     } else {
       this.service.addMeeting(meeting);
+      console.log("hello");
     }
     this.router.navigate(['/']);
 
